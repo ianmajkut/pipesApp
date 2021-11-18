@@ -43,6 +43,15 @@
                 <li>Fecha con Pipe date: 'long'</li>
                 <li>Fecha con Pipe date: 'EEEE d, M, YYYY'</li>
             </ul>
+
+            <hr>
+
+            <ul>
+                <li>fecha | date: 'long':'GMT-4':'es-AR'</li>
+                <li>fecha | date: 'long':'GMT-2'</li>
+                <li>fecha | date: 'long':'':'fr'</li>
+            </ul>
+
         </p-card>
     </div>
     <div class="col-6">
@@ -54,6 +63,15 @@
                 <li>{{fecha | date: 'long'}}</li>
                 <li>{{fecha | date: 'EEEE d, M, YYYY'}}</li>
             </ul>
+
+            <hr>
+
+            <ul>
+                <li>{{fecha | date: 'long':'GMT-4':'es-AR'}}</li>
+                <li>{{fecha | date: 'long':'GMT-2'}}</li>
+                <li>{{fecha | date: 'long':'':'fr'}}</li>
+            </ul>
+
         </p-card>
     </div>
 </div>

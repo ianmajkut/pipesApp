@@ -18,7 +18,7 @@ export class NoComunesComponent {
   }
 
   //i18nPlural
-  clientes:string[] = ['Maria', 'Pedro', 'Juan', 'Fernando']
+  clientes:string[] = ['Maria', 'Pedro', 'Juan', 'Eduardo', 'Fernando']
   clientesMapa = {
     '=0': 'no tenemos ningún cliente esperando',
     '=1': 'tenemos un cliente esperando',
@@ -28,6 +28,37 @@ export class NoComunesComponent {
 
   constructor() { }
 
-  
+  cambiarCliente(){
+    this.nombre = 'Juan';
+    this.genero = 'masculino';
+  }
 
+  borrarCliente(){
+    //console.log(`Array original: ${this.clientes}`)
+    this.clientes.pop();
+    //console.log(this.clientes);
+  }
+
+  //KeyValue Pipe
+  persona = {
+    nombre: 'Sergio',
+    edad: 35,
+    direccion: 'Barrio Norte'
+  }
+
+  //JSON Pipe
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true
+    },
+    {
+      nombre: 'Robin',
+      vuela: false
+    },
+    {
+      nombre: 'Aquaman',
+      vuela: true
+    }
+  ]
 }

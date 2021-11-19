@@ -6,9 +6,26 @@ import { Heroe } from '../interfaces/ventas.interface';
 })
 export class OrdenarPipe implements PipeTransform {
 
-  transform(heroes: Heroe[]): Heroe[] {
-    heroes = heroes.sort((a,b) => (a.nombre > b.nombre) ? 1 : -1);
-    return heroes;
+  transform(heroes: Heroe[], orderPor: string = 'sin valor'): Heroe[] {
+
+    //console.log(orderPor);
+    switch(orderPor){
+      case 'nombre':
+        return heroes.sort((a,b) => (a.nombre > b.nombre) ? 1 : -1);
+      case 'vuela':
+        return heroes.sort((a,b) => (a.vuela > b.vuela) ? 1 : -1);
+      case 'color':
+        return heroes.sort((a,b) => (a.color > b.color) ? 1 : -1);
+      default:
+        return heroes;
+    }
+
+    // if(orderPor === 'sin valor' ){
+    //   return heroes;
+    // }else {
+    //   heroes = heroes.sort((a,b) => (a.nombre > b.nombre) ? 1 : -1);
+    // }
+    // return heroes;
   }
 
 }
